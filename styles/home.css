@@ -1,5 +1,10 @@
 .home-page {
   font-size: 2rem;
+  transform: scaleY(1.5) translateY(15%);
+}
+
+.home-page h1{
+  font-weight: normal;
 }
 
 .home-page table {
