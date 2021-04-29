@@ -1,0 +1,13 @@
+.home-page {
+  font-size: 2rem;
+}
+
+.home-page table {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.home-page footer {
+  display: flex;
+  justify-content: space-between;
+}
