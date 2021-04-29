@@ -26,6 +26,7 @@ export default function Home() {
 
       <footer>
         <span>&copy; {(new Date().getFullYear())}</span>
+        <span>the source code for this website is <a href="https://github.com/alachie/prototype.brutalist.website" target="_blank" rel="noreferrer noopener">available here</a> </span>
         <span>website by lachie :)</span>
       </footer>
     </div>
