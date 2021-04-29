@@ -19,7 +19,8 @@ export default function Drag() {
             <title>DRAG - BRUTALIST.WEBSITE</title>
 
             <style>
-{`                    .App {
+{`                    
+.App {
     text-align: center;
 }
 
@@ -149,11 +150,11 @@ footer {
         <header className="App-header">
 
             <span className="drag-text">
-            DRAG!
+                DRAG!
             </span>
 
             <h1>
-            Website website website 🌏
+                Website website website 🌏
             </h1>
             <marquee scrollamount="10" direction="">Huge website 🤸🏻‍♂️ Massive website 🤹🤸🏻‍♂️</marquee>
             <div>
@@ -168,8 +169,7 @@ footer {
             </div>
 
             <footer>
-            🌐 world wide web 🌐
-
+                🌐 world wide web 🌐
             </footer>
 
         </header>
