@@ -5,6 +5,11 @@
 
 .home-page h1{
   font-weight: normal;
+  font-family: sans-serif;
+}
+a {
+  font-family: sans-serif;
+  color: blue;
 }
 
 .home-page table {
