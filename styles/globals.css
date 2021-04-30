@@ -1,12 +1,16 @@
 html,
 body {
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 * {
   box-sizing: border-box;
+}
+
+.home-page {
+  margin: 20px;
 }
 
 .home-link {
@@ -16,4 +20,23 @@ body {
   z-index: 9999;
   font-size: 2rem;
   color: blue;
+}
+
+.image-smear-page {
+  margin: 0;
+}
+
+.image-smear-page p {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-smear-page canvas {
+  cursor: crosshair;
+}
+
+.image-smear-page canvas:active {
+  cursor: grabbing;
 }

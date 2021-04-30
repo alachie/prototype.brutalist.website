@@ -16,7 +16,11 @@ export default function Home() {
         <p style={{maxWidth: '22em'}}>Researching the trend and aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</p>
 
         <table>
-          <tbody>  
+          <tbody> 
+            <tr>
+              <td>30.04.2021</td>
+              <td><Link href="/demo/image-smear">Image Smear</Link></td>
+            </tr>
             <tr>
               <td>29.04.2021</td>
               <td><Link href="/demo/drag">Drag</Link></td>
