@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <h1>🚧 Brutalist.website prototype 🚧⚠️🏗️🚜</h1>
 
-        <p style={{maxWidth: '22em'}}>researching the trend of brutalist web design through the creation of an educational website/ interactive experience as creative practice as research.</p>
+        <p style={{maxWidth: '22em'}}>Researching the trend and aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</p>
 
         <table>
           <tbody>  
