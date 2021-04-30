@@ -19,6 +19,10 @@ export default function Home() {
           <tbody> 
             <tr>
               <td>30.04.2021</td>
+              <td><Link href="/demo/marquee">Marquee</Link></td>
+            </tr>
+            <tr>
+              <td>30.04.2021</td>
               <td><Link href="/demo/image-smear">Image Smear</Link></td>
             </tr>
             <tr>

@@ -40,3 +40,38 @@ body {
 .image-smear-page canvas:active {
   cursor: grabbing;
 }
+
+.marquee-wrapper {
+  display: block;
+  width: 100%;
+  font-size: 10vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+/* 
+.marquee-wrapper:hover .marquee-inner {
+  animation-play-state: paused;
+  background: black;
+  color: white;
+} */
+
+.marquee-inner,
+.marquee-inner div {
+  display: inline-block;
+}
+
+.marquee-inner {
+  animation: marquee 20s infinite linear;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
