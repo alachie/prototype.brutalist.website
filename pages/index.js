@@ -1,7 +1,32 @@
+import {useState, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
+  const [rotate, setRotate] = useState(false);
+
+  const toggleRotate = () => {
+    setRotate(!rotate);
+  }
+
+  useEffect(() => {
+    if(!rotate) {
+      return;
+    }
+    const page = document.querySelector('.home-page');
+
+    const handleTransform = (e) => {
+      page.style.webkitTransform = page.style.transform = `scaleY(1.5) translateY(15%) rotate3d(10, 180, ${(e.pageY/-20)*-1}, ${e.pageX/-10}deg)`;
+    }
+
+    document.addEventListener('mousemove', handleTransform);
+    
+    return () => {
+      page.style.webkitTransform = page.style.transform = `scaleY(1.5) translateY(15%)`;
+      document.removeEventListener('mousemove', handleTransform);
+    }
+  }, [rotate]) 
+
   return (
     <div className="home-page">
       <Head>
@@ -32,6 +57,7 @@ export default function Home() {
           </tbody>
         </table>
 
+        <div><input onClick={toggleRotate} type="checkbox" name="rotate" id="rotate"/><label for="rotate"> Enable Rotate</label></div>
       </main>
 
       <footer>

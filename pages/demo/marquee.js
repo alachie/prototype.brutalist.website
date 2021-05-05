@@ -14,7 +14,7 @@ function Marquee({children}) {
                     [...children]
                 ))}
             </div>
-            </div>
+        </div>
     )
 }
 

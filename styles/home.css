@@ -1,11 +1,14 @@
 .home-page {
   font-size: 2rem;
   transform: scaleY(1.5) translateY(15%);
+  /* perspective: 10000; */
+  transform-style: preserve-3d;
 }
 
 .home-page h1{
   font-weight: normal;
   font-family: sans-serif;
+  transform: translateZ(100px);
 }
 a {
   font-family: sans-serif;
@@ -15,9 +18,15 @@ a {
 .home-page table {
   margin-top: 4rem;
   margin-bottom: 4rem;
+  transform: translateZ(100px);
 }
 
 .home-page footer {
   display: flex;
   justify-content: space-between;
+}
+
+.home-page footer span:nth-child(2) {
+  transform: translateZ(-100px);
+
 }
