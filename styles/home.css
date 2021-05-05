@@ -25,8 +25,3 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
-.home-page footer span:nth-child(2) {
-  transform: translateZ(-100px);
-
-}
