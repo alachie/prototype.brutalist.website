@@ -75,3 +75,24 @@ body {
     transform: translateX(-100%);
   }
 }
+
+
+.dvd-page {
+  background: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.dvd-page .dvd {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  color: black;
+  font-size: 2rem;
+  font-family: sans-serif;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

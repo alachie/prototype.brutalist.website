@@ -20,7 +20,7 @@ export default function Home() {
     }
 
     document.addEventListener('mousemove', handleTransform);
-    
+
     return () => {
       page.style.webkitTransform = page.style.transform = `scaleY(1.5) translateY(15%)`;
       document.removeEventListener('mousemove', handleTransform);
@@ -43,16 +43,20 @@ export default function Home() {
         <table>
           <tbody> 
             <tr>
-              <td>30.04.2021</td>
-              <td><Link href="/demo/marquee">Marquee</Link></td>
+              <td>05.05.2021</td>
+              <td><Link href="/demo/dvd">📀 dvd</Link></td>
             </tr>
             <tr>
               <td>30.04.2021</td>
-              <td><Link href="/demo/image-smear">Image Smear</Link></td>
+              <td><Link href="/demo/marquee">🎠 Marquee</Link></td>
+            </tr>
+            <tr>
+              <td>30.04.2021</td>
+              <td><Link href="/demo/image-smear">🖼️ Image Smear</Link></td>
             </tr>
             <tr>
               <td>29.04.2021</td>
-              <td><Link href="/demo/drag">Drag</Link></td>
+              <td><Link href="/demo/drag">↔️ Drag</Link></td>
             </tr>
           </tbody>
         </table>
