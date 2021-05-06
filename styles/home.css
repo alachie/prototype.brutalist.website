@@ -24,4 +24,19 @@ a {
 .home-page footer {
   display: flex;
   justify-content: space-between;
+  animation-name: xmove;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes xmove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100px);
+  }
 }

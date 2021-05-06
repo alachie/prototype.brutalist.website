@@ -53,6 +53,10 @@ export default function Home() {
         <table>
           <tbody> 
             <tr>
+              <td>06.05.2021</td>
+              <td><Link href="/demo/cursor-cube">📦 Cursor Cube</Link></td>
+            </tr>
+            <tr>
               <td>05.05.2021</td>
               <td><Link href="/demo/dvd">📀 dvd</Link></td>
             </tr>
