@@ -4,9 +4,14 @@ import Link from 'next/link'
 
 export default function Home() {
   const [rotate, setRotate] = useState(false);
+  const [largeCursor, setLargeCursor] = useState(false);
 
   const toggleRotate = () => {
     setRotate(!rotate);
+  }
+
+  const toggleCursor = () => {
+    setLargeCursor(!largeCursor);
   }
 
   useEffect(() => {
@@ -27,8 +32,13 @@ export default function Home() {
     }
   }, [rotate]) 
 
+  useEffect(() => {
+    const body = document.querySelector('body')
+    largeCursor ? body.classList.add('large-cursor') : body.classList.remove('large-cursor');
+  }, [largeCursor])
+
   return (
-    <div className="home-page">
+    <div className='home-page'>
       <Head>
         <title>PROTOTYPE - BRUTALIST.WEBSITE</title>
         <meta name="description" content="" />
@@ -61,7 +71,10 @@ export default function Home() {
           </tbody>
         </table>
 
-        <div><input onClick={toggleRotate} type="checkbox" name="rotate" id="rotate"/><label for="rotate"> Enable Rotate</label></div>
+        <div className="optionToggles">
+          <input onClick={toggleRotate} type="checkbox" name="rotate" id="rotate"/><label for="rotate"> Enable Rotate</label>
+          <input onClick={toggleCursor} type="checkbox" name="largeCursor" id="largeCursor"/><label for="largeCursor"> Enable Large Cursor</label>
+        </div>
       </main>
 
       <footer>

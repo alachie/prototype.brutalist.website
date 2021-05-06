@@ -96,3 +96,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.large-cursor {
+  cursor: url("/cursor-default.png"), auto !important;
+}
+
+.large-cursor a,
+.large-cursor button,
+.large-cursor input,
+.large-cursor label {
+  cursor: url("/cursor-pointer.png"), pointer !important;
+}
