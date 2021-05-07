@@ -48,17 +48,38 @@ export default function Home() {
       <main>
         <h1>🚧 Brutalist.website prototype 🚧⚠️🏗️🚜</h1>
 
-        <p style={{maxWidth: '22em'}}>Investigating the aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</p>
+        <p style={{maxWidth: '18em', lineHeight: '1.1em'}}>Investigating the aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</p>
 
         <table>
-          <tbody> 
+          <tbody>
+            {/* <tr>
+              <td>06.05.2021</td>
+              <td><Link href="/demo/sweater">🍄 Sweater</Link></td>
+            </tr>  */}
+            <tr>
+              <td>07.05.2021</td>
+              <td><Link href="/demo/myriad">👹 Myriad</Link></td>
+              <td style={{fontSize: '0.5em'}}>inspired by <a href="https://www.youtube.com/watch?v=iTjn1d-d2II" target="_blank">Oneothrix Point Never</a></td>
+            </tr>
+            {/* <tr>
+              <td></td>
+              <td><Link href="/demo/image-scatter">Image Scatter</Link></td>
+            </tr> */}
+            <tr>
+              <td>07.05.2021</td>
+              <td><Link href="/demo/iframe-cube">📦 iframe Cube</Link></td>
+            </tr>
+            {/* <tr>
+              <td>06.05.2021</td>
+              <td><Link href="/demo/text">🔠 Text</Link></td>
+            </tr> */}
             <tr>
               <td>06.05.2021</td>
               <td><Link href="/demo/cursor-cube">📦 Cursor Cube</Link></td>
             </tr>
             <tr>
               <td>05.05.2021</td>
-              <td><Link href="/demo/dvd">📀 dvd</Link></td>
+              <td><Link href="/demo/dvd">📀 DVD</Link></td>
             </tr>
             <tr>
               <td>30.04.2021</td>
@@ -76,8 +97,8 @@ export default function Home() {
         </table>
 
         <div className="optionToggles">
-          <input onClick={toggleRotate} type="checkbox" name="rotate" id="rotate"/><label for="rotate"> Enable Rotate</label>
-          <input onClick={toggleCursor} type="checkbox" name="largeCursor" id="largeCursor"/><label for="largeCursor"> Enable Large Cursor</label>
+          <input onClick={toggleRotate} type="checkbox" name="rotate" id="rotate"/><label for="rotate"> Enable Rotate <sup>1</sup></label>
+          <input onClick={toggleCursor} type="checkbox" name="largeCursor" id="largeCursor"/><label for="largeCursor"> Enable Large Cursor <sup>2</sup></label>
         </div>
       </main>
 
@@ -86,6 +107,12 @@ export default function Home() {
         <span>the source code for this website is <a href="https://github.com/alachie/prototype.brutalist.website" target="_blank" rel="noreferrer noopener">available here</a> </span>
         <span>website by lachie :)</span>
       </footer>
+
+      <hr />
+      {/* <div style={{fontSize: '.5em', paddingBottom: '1rem'}}>
+        <p>[1] code base on ...</p>
+        <p>[2] cursors from bloomberg</p>
+      </div> */}
     </div>
   )
 }

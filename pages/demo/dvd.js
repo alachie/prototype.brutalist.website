@@ -1,11 +1,11 @@
-import {useEffect} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
 const _baseSpeed = 5;
 
 class _DVD {
-    constructor(el) {
+    constructor(el, x, y) {
         this.dot       = el;
         this.body      = document.querySelector('body')
         this.baseSpeed = _baseSpeed;
@@ -13,8 +13,8 @@ class _DVD {
         this.velocityY = -1;
         this.bodyBcr   = this.body.getBoundingClientRect();
         this.dotBcr    = this.dot.getBoundingClientRect();
-        this.posX      = window.innerWidth - this.dotBcr.width - 40;
-        this.posY      = window.innerHeight - this.dotBcr.height - 40;
+        this.posX      = x;
+        this.posY      = y;
         this.paused    = false;
 
         this.init();
@@ -101,14 +101,43 @@ class _DVD {
     }
 }
 
-export default function DVD() {
+function Ball({text, x, y}) {
 
+    const _ref = useRef();
+    
     useEffect(() => {
-        const dvd_ = new _DVD(document.querySelector('.dvd'))
+        const dvd = new _DVD(_ref.current, x-20, y-20)
     }, [])
 
+
     return (
-        <div className="dvd-page">
+        <div className="dvd-ball" ref={_ref}>{text}</div>
+    )
+}
+
+export default function DVD() {
+
+    const [balls, setBalls] = useState([])
+
+    useEffect(() => {
+        const dvd_ = new _DVD(document.querySelector('.dvd'), window.innerWidth - 180, window.innerHeight - 190)
+    }, [])
+
+
+    const createBall = (e) => {
+        setBalls(oldBalls => [
+            ...oldBalls,
+            {
+                i: balls.length + 1,
+                text: '💿',
+                x: e.clientX,
+                y: e.clientY
+            }
+        ])
+    }
+
+    return (
+        <div className="dvd-page" onClick={createBall}>
             <Head>
                 <title>📀 DVD - BRUTALIST.WEBSITE</title>
 
@@ -116,6 +145,9 @@ export default function DVD() {
             <Link href="/"><a className="home-link">🏡 HOME</a></Link>
 
             <div className="dvd">dvd</div>
+
+            {balls.map(ball => <Ball key={ball.i} text={ball.text} x={ball.x} y={ball.y}/>)}
+
         </div>
     )
 }
