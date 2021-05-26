@@ -1,6 +1,9 @@
+import {useState, useEffect} from 'react'
+
 import Head from 'next/head'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
+
 
 const onDrag = (event, info) => {
   document.querySelector('body').classList.add('serif')
@@ -13,6 +16,14 @@ const offDrag = (event, info) => {
 
 
 export default function Drag() {
+    const [z, setZ] = useState(2);
+
+    const onClick = (event) => {
+        setZ(z + 1)
+        console.log(z)
+        event.target.style.zIndex = z;
+    }
+
   return (
     <div className="drag-page">
         <Head>
@@ -158,14 +169,14 @@ footer {
             </h1>
             <marquee scrollamount="10" direction="">Huge website 🤸🏻‍♂️ Massive website 🤹🤸🏻‍♂️</marquee>
             <div>
-            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag}>
+            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag} onMouseDown={onClick}>
                 lachie's amazing website :)
             </motion.div>
-            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag}>
+            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag} onMouseDown={onClick}>
                 🍄🍄🍄🍄
             </motion.div>
-            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag}/>
-            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag}/>
+            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag} onMouseDown={onClick}/>
+            <motion.div className="drag-box" drag dragMomentum={false} onDragStart={onDrag} onDragEnd={offDrag} onMouseDown={onClick}/>
             </div>
 
             <footer>
