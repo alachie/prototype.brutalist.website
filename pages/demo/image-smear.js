@@ -1,12 +1,14 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-const images = ["https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/07/Van-Gogh.-Starry-Night-469x376.jpg", "https://www.w3schools.com/tags/img_the_scream.jpg"]
-
+const images = [
+    "https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/07/Van-Gogh.-Starry-Night-469x376.jpg", 
+    "https://www.w3schools.com/tags/img_the_scream.jpg",
+    '/error.jpg'
+]
 
 export default function Drag() {
-
     useEffect(() => {
         var canvas = document.getElementById('canvas');
 
@@ -55,7 +57,16 @@ export default function Drag() {
         }, false);
 
         canvas.addEventListener('mousedown', () => {
-            img.src = random(images);
+
+            const imageSrc = random(images);
+            img.src = imageSrc;
+            console.log(imageSrc)
+            if(imageSrc === "/error.jpg") {
+                document.querySelector('.image-smear-page').style.backgroundImage = 'url("/bliss.jpg")'; 
+            } else {
+                document.querySelector('.image-smear-page').style.backgroundImage = ''
+            }
+
             mouseDown = true;
         });
 
