@@ -24,6 +24,7 @@ body {
 
 .image-smear-page {
   margin: 0;
+  background-size: cover;
 }
 
 .image-smear-page p {
@@ -143,6 +144,23 @@ body {
 
 .text-page .text-wrapper {
   cursor: pointer;
+  line-height: .8em;
+}
+
+.text-click {
+  position: fixed;
+  left: 50%;
+  bottom: 10vh;
+  transform: translateX(-50%);
+  /* pointer-events: none; */
+  font-size: 4rem;
+  color: black;
+  z-index: 100;
+  cursor: pointer;
+}
+.text-click img{
+  height: 1em;
+  width: auto;
 }
 
 .text-page .text-wrapper span {
@@ -242,4 +260,32 @@ body {
   color: blue;
   font-family: serif;
   font-style: italic;
+}
+.big-mushroom {
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+.big-mushroom:hover {
+  transform: scale(5);
+}
+
+.credits-image {
+  margin: 0;
+  margin-bottom: 10px;
+  max-width: 40vw;
+  overflow-wrap: break-word;
+  font-size: 0.5em;
+}
+
+.image-scatter-page button{
+  position: fixed;
+  font-size: 5vw;
+  bottom: 4rem;
+  left: 4rem;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.image-scatter-page img {
+  cursor: move;
 }

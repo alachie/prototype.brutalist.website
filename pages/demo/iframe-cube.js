@@ -33,8 +33,12 @@ export default function IframeCube() {
                     <div className="cube__face cube__face--back">
                         <iframe src="https://lachie.co"></iframe>
                     </div>
-                    <div className="cube__face cube__face--right">right</div>
-                    <div className="cube__face cube__face--left">left</div>
+                    <div className="cube__face cube__face--right">
+                         <iframe src="https://en.wikipedia.org/wiki/website"></iframe>
+                    </div>
+                    <div className="cube__face cube__face--left">
+                        <h1>sadly there is no wikipedia article for brutalist websites :(</h1>
+                    </div>
                     <div className="cube__face cube__face--top">top</div>
                     <div className="cube__face cube__face--bottom">bottom</div>
                 </div>

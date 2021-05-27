@@ -20,7 +20,6 @@ export default function Drag() {
 
     const onClick = (event) => {
         setZ(z + 1)
-        console.log(z)
         event.target.style.zIndex = z;
     }
 

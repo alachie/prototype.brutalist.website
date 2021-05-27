@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import gsap from 'gsap';
 
 export default function Home() {
   const [rotate, setRotate] = useState(false);
@@ -37,6 +38,22 @@ export default function Home() {
     largeCursor ? body.classList.add('large-cursor') : body.classList.remove('large-cursor');
   }, [largeCursor])
 
+  useEffect(() => {
+    const tl = new gsap.timeline();
+    tl.from('h1, p', {
+      opacity: 0,
+      duration: 0.01,
+      stagger: .2,
+      delay: 0.2,
+    })
+
+    tl.from('tr, .optionToggles, footer', {
+      opacity: 0,
+      duration: 0.01,
+      stagger: .03,
+    })
+  }, [])
+
   return (
     <div className='home-page'>
       <Head>
@@ -52,27 +69,35 @@ export default function Home() {
 
         <table>
           <tbody>
-            {/* <tr>
-              <td>06.05.2021</td>
-              <td><Link href="/demo/sweater">🍄 Sweater</Link></td>
-            </tr>  */}
             <tr>
+              <td>26.05.2021</td>
+              <td><Link href="/demo/emoji-random">🎲 Emoji Random</Link></td>
+            </tr> 
+            {/* <tr>
+              <td>25.05.2021</td>
+              <td><Link href="/demo/95">🪟 Windows 95</Link></td>
+            </tr>  */}
+            {/* <tr>
+              <td>23.05.2021</td>
+              <td><Link href="/demo/image-text">🖼️ Images in Text</Link></td>
+            </tr>  */}
+            {/* <tr>
               <td>07.05.2021</td>
               <td><Link href="/demo/myriad">👹 Myriad</Link></td>
               <td style={{fontSize: '0.5em'}}>inspired by <a href="https://www.youtube.com/watch?v=iTjn1d-d2II" target="_blank">Oneothrix Point Never</a></td>
-            </tr>
-            {/* <tr>
-              <td></td>
-              <td><Link href="/demo/image-scatter">Image Scatter</Link></td>
             </tr> */}
+            <tr>
+              <td>13.05.2021</td>
+              <td><Link href="/demo/image-scatter">🤹 Image Scatter</Link></td>
+            </tr>
+            <tr>
+              <td>10.05.2021</td>
+              <td><Link href="/demo/text">🔠 Text Stretch</Link></td>
+            </tr>
             <tr>
               <td>07.05.2021</td>
               <td><Link href="/demo/iframe-cube">📦 iframe Cube</Link></td>
             </tr>
-            {/* <tr>
-              <td>06.05.2021</td>
-              <td><Link href="/demo/text">🔠 Text</Link></td>
-            </tr> */}
             <tr>
               <td>06.05.2021</td>
               <td><Link href="/demo/cursor-cube">📦 Cursor Cube</Link></td>
@@ -105,7 +130,7 @@ export default function Home() {
       <footer>
         <span>&copy; {(new Date().getFullYear())}</span>
         <span>the source code for this website is <a href="https://github.com/alachie/prototype.brutalist.website" target="_blank" rel="noreferrer noopener">available here</a> </span>
-        <span>website by lachie :)</span>
+        <span><Link href="/credits">Credits</Link></span>
       </footer>
 
       <hr />
