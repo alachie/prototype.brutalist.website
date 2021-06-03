@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import gsap from 'gsap';
+import {motion} from 'framer-motion'
 
 export default function Home() {
   const [rotate, setRotate] = useState(false);
@@ -54,6 +55,8 @@ export default function Home() {
     })
   }, [])
 
+
+
   return (
     <div className='home-page'>
       <Head>
@@ -65,10 +68,14 @@ export default function Home() {
       <main>
         <h1>🚧 Brutalist.website prototype 🚧⚠️🏗️🚜</h1>
 
-        <p style={{maxWidth: '18em', lineHeight: '1.1em'}}>Investigating the aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</p>
+        <motion.p drag dragMomentum={false} className="description" style={{maxWidth: '18em', lineHeight: '1.1em'}}>🔬 Investigating the aesthetic signifiers of brutalist web design through the creation of an educational website/interactive experience, as practice-based research.</motion.p>
 
         <table>
           <tbody>
+            <tr>
+              <td>1.06.2021</td>
+              <td><Link href="/demo/cylinder-text">🌀 Text Cylinder</Link></td>
+            </tr> 
             <tr>
               <td>26.05.2021</td>
               <td><Link href="/demo/emoji-random">🎲 Emoji Random</Link></td>

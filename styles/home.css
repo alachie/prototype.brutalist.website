@@ -15,6 +15,21 @@ a {
   color: blue;
 }
 
+.home-page .description {
+  position: absolute;
+  right: 4rem;
+  top: 10vh;
+  background: linear-gradient(90deg, transparent, blue);
+  padding: 1rem;
+  cursor: move;
+}
+
+@media (max-width: 900px) {
+  .home-page .description {
+    position: static;
+  }
+}
+
 .home-page table {
   margin-top: 4rem;
   margin-bottom: 4rem;

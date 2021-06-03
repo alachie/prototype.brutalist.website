@@ -87,18 +87,16 @@ export default function Home() {
                 <p className="credits-image">https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/1981_BostonCityHall_byLebovich8_HABS_MA1176.jpg/298px-1981_BostonCityHall_byLebovich8_HABS_MA1176.jpg</p>
                 <p className="credits-image">https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Vista_Teatro_teresa_carre%C3%B1o.jpg/298px-Vista_Teatro_teresa_carre%C3%B1o.jpg</p>
                 <p className="credits-image">https://community.flexera.com/t5/InstallShield-Forum/Suite-Advanced-UI-setups-crash-on-Windows-XP-SP3-Is-there-a-fix/td-p/91638?attachment-id=895</p>
-              
               </td>
             </tr> 
-
           </tbody>
         </table>
 
         <div onClick={onClick} className="big-mushroom" style={{
-            position: 'fixed',
-            right: '10vw',
-            top: '40vh',
-            fontSize: '140px'
+          position: 'fixed',
+          right: '10vw',
+          top: '40vh',
+          fontSize: '140px'
         }}>{emoji}</div>
       </main>
 
